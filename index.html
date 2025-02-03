@@ -1,0 +1,53 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You be My Valentine?</title> 
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1>Will you be my valentine?</h1>
+            <img src="https://i.ibb.co/dsLchzPK/Oopsie-Woopsie-i-forgot-to-add-a-bio-to-my-other-Pins.jpg">
+            <button id="nobtu">No</button>
+            <button id="yesbtu">Yes</button>
+        </div>
+    </div>
+</body>
+<script>
+    const noButton=document.getElementById("nobtu");
+    const yesButton=document.getElementById("yesbtu");
+    noButton.addEventListener('mouseenter', (event)=>{
+        const buttonRect = noButton.getBoundingClientRect();
+
+        const maxWidth = innerWidth *0.8;
+        const maxHeight = innerHeight*0.8;
+
+        let newX = maxWidth*Math.random();
+        let newY = Math.random() * maxHeight;
+
+        newX = Math.max(20, Math.min(maxWidth, newX));
+        newY = Math.max(20, Math.min(maxHeight, newY));
+
+        noButton.style.position = 'absolute';
+        noButton.style.left=`${newX}px`;
+        noButton.style.top = `${newY}px`;
+    });
+        document.getElementById('yesbtu').addEventListener('click',()=>{
+            console.log("button pressed");
+            document.querySelector('img').src='https://i.ibb.co/20rN3jC3/shy-cat.jpg';
+            document.querySelector('.container').innerHTML +='<h2>Yayyy!!</h2>';
+            const noButton=document.getElementById("nobtu");
+            const yesButton=document.getElementById("yesbtu");
+            yesButton.style.display = 'none';
+            noButton.style.display='none';
+        });
+</script>
+</html>

@@ -1,0 +1,40 @@
+body{
+    background-color: FFFFEB;
+}
+
+.wrapper{
+    color: F49CBB;
+    font-family: "Pixelify Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+.container{
+    text-align: center;
+    max-width: 90%;
+    width: 400px;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+button{
+    background-color: CEE2CA;
+    color: F49CBB;
+    font-family: "Pixelify Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin:10px;
+}
